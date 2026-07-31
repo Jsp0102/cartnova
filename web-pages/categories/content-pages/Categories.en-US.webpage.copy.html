@@ -1,0 +1,71 @@
+{% assign home_url = sitemarkers['Home'].url | default: '/' %}
+{% assign products_url = sitemarkers['Products'].url | default: '/products' %}
+
+<div class='cn-categories-page'>
+  <section class='cn-categories-hero'>
+    <div class='container text-center'>
+      <ol class='breadcrumb cn-categories-breadcrumb'>
+        <li><a href='{{ home_url | escape }}'>Home</a></li>
+        <li class='active'>Categories</li>
+      </ol>
+      <p class='cn-eyebrow'>Find what you love</p>
+      <h1 class='cn-page-title'>Shop by Category</h1>
+      <p>Explore handpicked collections designed for every part of your day.</p>
+    </div>
+  </section>
+
+  <section class='cn-categories-grid-section'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=electronics'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/ef20fde5-fa9b-4725-afa9-84ee2e627d9c/thumbnails/xxlarge.jpg' alt='Electronics'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Electronics</strong><small>124 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=fashion'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/662cd758-a112-495a-a93a-78bf7a1824af/thumbnails/xxlarge.jpg' alt='Fashion'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Fashion</strong><small>86 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=home-living'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/e8d3f311-7f2d-40e3-b184-646fb5e5e8c1/thumbnails/xxlarge.jpg' alt='Home and living'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Home &amp; Living</strong><small>72 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=sports'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/f22235b2-03ef-4f09-af26-38808c1db98b/thumbnails/xxlarge.jpg' alt='Sports and outdoors'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Sports &amp; Outdoors</strong><small>48 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=beauty'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/992c463f-49da-425d-a69b-13e58a0b7bf5/thumbnails/xxlarge.jpg' alt='Beauty products'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Beauty</strong><small>39 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=gaming'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/e02290a6-2aea-4f69-9556-09d614332727/thumbnails/xxlarge.jpg' alt='Gaming products'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Gaming</strong><small>31 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=audio'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/e17a87d9-2e25-45d9-a341-85fb99224c6c/thumbnails/xxlarge.jpg' alt='Audio products'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Audio</strong><small>28 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>
+          <a class='cn-category-display-card' href='{{ products_url | escape }}?category=photography'>
+            <img src='https://cdn.hubblecontent.osi.office.net/m365content/publish/db4d8a3a-8904-45b1-83f8-29113bb1b9bf/thumbnails/xxlarge.jpg' alt='Photography products'>
+            <span class='cn-category-display-card__overlay'></span><span class='cn-category-display-card__content'><strong>Photography</strong><small>22 products</small><span>Explore <i class='glyphicon glyphicon-arrow-right' aria-hidden='true'></i></span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

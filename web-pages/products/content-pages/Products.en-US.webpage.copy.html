@@ -1,0 +1,118 @@
+{% assign products_url = sitemarkers['Products'].url | default: '/products' %}
+{% assign categories_url = sitemarkers['Categories'].url | default: '/categories' %}
+{% assign product_details_url = sitemarkers['Product Details'].url | default: '/product-details' %}
+{% assign cart_url = sitemarkers['Shopping Cart'].url | default: '/shopping-cart' %}
+
+<div class='cn-products-page'>
+  <section class='cn-products-hero'>
+    <div class='container'>
+      <ol class='breadcrumb cn-products-breadcrumb'>
+        <li><a href='{{ sitemarkers['Home'].url | default: '/' | escape }}'>Home</a></li>
+        <li class='active'>Products</li>
+      </ol>
+      <p class='cn-eyebrow'>Discover more</p>
+      <h1 class='cn-page-title'>Explore Our Products</h1>
+      <p>Find quality picks across technology, home, fashion, and everyday essentials.</p>
+    </div>
+  </section>
+
+  <section class='cn-products-catalogue'>
+    <div class='container'>
+      <form class='row cn-products-toolbar' method='get' action='{{ products_url | escape }}' role='search'>
+        <div class='col-sm-6 col-md-5'>
+          <label class='sr-only' for='products-search'>Search products</label>
+          <div class='input-group'>
+            <input id='products-search' class='form-control' type='search' name='q' value='{{ request.params.q | escape }}' placeholder='Search products'>
+            <span class='input-group-btn'><button class='btn cn-btn-primary' type='submit' aria-label='Search products'><span class='glyphicon glyphicon-search' aria-hidden='true'></span></button></span>
+          </div>
+        </div>
+        <div class='col-xs-6 col-sm-3 col-md-3'>
+          <label for='products-sort'>Sort by</label>
+          <select id='products-sort' class='form-control' name='sort'>
+            <option value='featured'>Featured</option>
+            <option value='newest'>Newest</option>
+            <option value='price-low'>Price: Low to High</option>
+            <option value='price-high'>Price: High to Low</option>
+            <option value='rating'>Top Rated</option>
+          </select>
+        </div>
+        <div class='col-xs-6 col-sm-3 col-md-4 cn-products-toolbar__summary'>
+          <strong>48 products</strong><span>Showing popular picks</span>
+        </div>
+      </form>
+
+      <div class='row'>
+        <aside class='col-md-3 cn-products-filter-column' aria-label='Product filters'>
+          <form class='cn-filter-panel' method='get' action='{{ products_url | escape }}'>
+            <input type='hidden' name='q' value='{{ request.params.q | escape }}'>
+            <div class='cn-filter-panel__heading'><h2>Filters</h2><a href='{{ products_url | escape }}'>Clear all</a></div>
+            <fieldset>
+              <legend>Category</legend>
+              <label><input type='checkbox' name='category' value='electronics'> Electronics</label>
+              <label><input type='checkbox' name='category' value='fashion'> Fashion</label>
+              <label><input type='checkbox' name='category' value='home-living'> Home &amp; Living</label>
+              <label><input type='checkbox' name='category' value='sports'> Sports &amp; Outdoors</label>
+              <a class='cn-filter-panel__more' href='{{ categories_url | escape }}'>View all categories</a>
+            </fieldset>
+            <fieldset>
+              <legend>Price range</legend>
+              <div class='row cn-price-fields'>
+                <div class='col-xs-6'><label class='sr-only' for='price-min'>Minimum price</label><input id='price-min' class='form-control' type='number' name='min_price' min='0' placeholder='Min'></div>
+                <div class='col-xs-6'><label class='sr-only' for='price-max'>Maximum price</label><input id='price-max' class='form-control' type='number' name='max_price' min='0' placeholder='Max'></div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Rating</legend>
+              <label><input type='radio' name='rating' value='4'> <span class='cn-rating'>★★★★★</span> &amp; up</label>
+              <label><input type='radio' name='rating' value='3'> <span class='cn-rating'>★★★★☆</span> &amp; up</label>
+            </fieldset>
+            <button class='btn cn-btn cn-btn-primary cn-filter-panel__apply' type='submit'>Apply Filters</button>
+          </form>
+        </aside>
+
+        <div class='col-md-9'>
+          <div class='row cn-products-grid'>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e17a87d9-2e25-45d9-a341-85fb99224c6c/thumbnails/xxlarge.jpg', image_alt: 'Wireless headphones', product_name: 'Wireless Headphones', category: 'Electronics', price: '$79.99', original_price: '$99.99', discount: '20% OFF', rating: '4.8', rating_count: '86', product_url: product_details_url, cart_url: cart_url, product_id: 'wireless-headphones' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/166d7c91-4ca2-4309-b3a8-859eefc7d4fd/thumbnails/xxlarge.jpg', image_alt: 'Smart watch', product_name: 'Smart Watch Series 9', category: 'Electronics', price: '$129.99', rating: '4.9', rating_count: '128', product_url: product_details_url, cart_url: cart_url, product_id: 'smart-watch-series-9' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e5effe3c-bb70-4625-9e8f-9ce0365e6ae8/thumbnails/xxlarge.jpg', image_alt: 'Ergonomic office chair', product_name: 'Ergonomic Office Chair', category: 'Home & Living', price: '$189.99', original_price: '$229.99', discount: '17% OFF', rating: '4.7', rating_count: '54', product_url: product_details_url, cart_url: cart_url, product_id: 'ergonomic-office-chair' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/db4d8a3a-8904-45b1-83f8-29113bb1b9bf/thumbnails/xxlarge.jpg', image_alt: 'Compact digital camera', product_name: 'Compact Digital Camera', category: 'Electronics', price: '$249.99', rating: '4.6', rating_count: '42', product_url: product_details_url, cart_url: cart_url, product_id: 'compact-digital-camera' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/c4026b5a-733d-4f03-9b68-efb06b21ad88/thumbnails/xxlarge.jpg', image_alt: 'Smartphone', product_name: 'Smartphone X200', category: 'Electronics', price: '$699.99', original_price: '$799.99', discount: '12% OFF', rating: '4.8', rating_count: '110', product_url: product_details_url, cart_url: cart_url, product_id: 'smartphone-x200' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e02290a6-2aea-4f69-9556-09d614332727/thumbnails/xxlarge.jpg', image_alt: 'Gaming laptop', product_name: 'Gaming Laptop Pro', category: 'Computers', price: '$1,099.99', rating: '4.9', rating_count: '67', product_url: product_details_url, cart_url: cart_url, product_id: 'gaming-laptop-pro' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/992c463f-49da-425d-a69b-13e58a0b7bf5/thumbnails/xxlarge.jpg', image_alt: 'Home collection', product_name: 'Modern Home Collection', category: 'Home & Living', price: '$89.99', rating: '4.5', rating_count: '39', product_url: product_details_url, cart_url: cart_url, product_id: 'modern-home-collection' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e17a87d9-2e25-45d9-a341-85fb99224c6c/thumbnails/xxlarge.jpg', image_alt: 'Noise cancelling headphones', product_name: 'Noise Cancelling Headphones', category: 'Audio', price: '$149.99', original_price: '$179.99', discount: '16% OFF', rating: '4.7', rating_count: '91', product_url: product_details_url, cart_url: cart_url, product_id: 'noise-cancelling-headphones' %}
+            </div>
+            <div class='col-xs-6 col-sm-4'>
+              {% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/db4d8a3a-8904-45b1-83f8-29113bb1b9bf/thumbnails/xxlarge.jpg', image_alt: 'Travel camera', product_name: 'Travel Camera Kit', category: 'Photography', price: '$329.99', rating: '4.6', rating_count: '58', product_url: product_details_url, cart_url: cart_url, product_id: 'travel-camera-kit' %}
+            </div>
+          </div>
+
+          <nav class='text-center' aria-label='Product results pages'>
+            <ul class='pagination cn-products-pagination'>
+              <li class='disabled'><span aria-label='Previous'><span aria-hidden='true'>&laquo;</span></span></li>
+              <li class='active'><a href='{{ products_url | escape }}?page=1' aria-current='page'>1</a></li>
+              <li><a href='{{ products_url | escape }}?page=2'>2</a></li>
+              <li><a href='{{ products_url | escape }}?page=3'>3</a></li>
+              <li><a href='{{ products_url | escape }}?page=4'>4</a></li>
+              <li><a href='{{ products_url | escape }}?page=2' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

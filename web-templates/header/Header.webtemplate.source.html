@@ -1,0 +1,81 @@
+{% assign home_url = sitemarkers['Home'].url | default: '/' %}
+{% assign products_url = sitemarkers['Products'].url | default: '/products' %}
+{% assign categories_url = sitemarkers['Categories'].url | default: '/categories' %}
+{% assign about_url = sitemarkers['About Us'].url | default: '/about-us' %}
+{% assign cart_url = sitemarkers['Shopping Cart'].url | default: '/shopping-cart' %}
+{% assign search_url = sitemarkers['Search'].url | default: '/search' %}
+{% assign profile_url = sitemarkers['Profile'].url | default: website.sign_in_url_substitution %}
+{% assign logo_url = snippets['Logo URL'] | default: '/CartNovaLogo.png' %}
+{% assign logo_alt = snippets['Logo alt text'] | default: 'CartNova' %}
+{% assign site_name = snippets['Site name'] | default: 'CartNova' %}
+
+<header class='cn-site-header' role='banner'>
+  <div class='skip-to-content'>
+    <a href='#mainContent'>{{ resx.Skip_To_Content | default: 'Skip to main content' }}</a>
+  </div>
+
+  <nav class='navbar navbar-default navbar-static-top cn-navbar' aria-label='{{ resx.Main_Navigation | default: "Main Navigation" }}'>
+    <div class='container'>
+      <div class='navbar-header'>
+        <button
+          type='button'
+          class='navbar-toggle collapsed'
+          data-toggle='collapse'
+          data-target='#cartnova-navbar'
+          aria-controls='cartnova-navbar'
+          aria-expanded='false'
+          title='{{ snippets["Header/Toggle Navigation"] | default: "Toggle navigation" | escape }}'
+        >
+          <span class='sr-only'>{{ snippets['Header/Toggle Navigation'] | default: 'Toggle navigation' | escape }}</span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+          <span class='icon-bar'></span>
+        </button>
+
+        <a class='navbar-brand cn-brand' href='{{ home_url | escape }}' aria-label='{{ site_name | escape }} home'>
+          <img src='{{ logo_url | escape }}' alt='{{ logo_alt | escape }}'>
+          <!-- <span>{{ site_name | escape }}</span> -->
+        </a>
+      </div>
+
+      <div id='cartnova-navbar' class='navbar-collapse collapse'>
+        <form class='navbar-form navbar-left cn-header-search' role='search' action='{{ search_url | escape }}' method='get' style="min-width: 30%;">
+          <label class='sr-only' for='cartnova-search'>Search products</label>
+          <div class='input-group position-relative'>
+            <input id='cartnova-search' class='form-control headerSearch' type='search' name='q' placeholder='Search products, categories…' autocomplete='off'>
+            <span class='searchIcon position-absolute'>
+              <button class='btn cn-btn-search' type='submit' aria-label='Search'>
+                <span class='glyphicon glyphicon-search' aria-hidden='true'></span>
+              </button>
+            </span>
+          </div>
+        </form>
+        <ul class='nav navbar-nav cn-primary-nav '>
+          <li><a href='{{ home_url | escape }}'>Home</a></li>
+          <li><a href='{{ products_url | escape }}'>Products</a></li>
+          <li><a href='{{ categories_url | escape }}'>Categories</a></li>
+          <li><a href='/deals' data-cartnova-future-route='deals'>Deals</a></li>
+          <li><a href='{{ about_url | escape }}'>About</a></li>
+          <li><a href='/contact' data-cartnova-future-route='contact'>Contact</a></li>
+        </ul>
+
+        
+
+        <ul class='nav navbar-nav navbar-right cn-header-actions'>
+          <li>
+            <a class='cn-header-icon' href='{{ cart_url | escape }}' aria-label='Shopping cart' title='Shopping cart'>
+              <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span>
+              <span class='visible-xs-inline'>Cart</span>
+            </a>
+          </li>
+          <li>
+            <a class='cn-header-icon' href='{{ profile_url | escape }}' aria-label='{% if user %}{{ user.fullname | escape }}{% else %}Sign in{% endif %}' title='{% if user %}{{ user.fullname | escape }}{% else %}Sign in{% endif %}'>
+              <span class='glyphicon glyphicon-user' aria-hidden='true'></span>
+              <span class='visible-xs-inline'>{% if user %}Account{% else %}Sign in{% endif %}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

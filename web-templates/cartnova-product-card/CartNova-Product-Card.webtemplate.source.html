@@ -1,0 +1,56 @@
+{% comment %}
+  Reusable product-card include.
+  Example:
+  {% include 'CartNova Product Card',
+    image_url: product_image,
+    product_name: product_name,
+    category: category_name,
+    price: '$79.99',
+    original_price: '$99.99',
+    discount: '20% OFF',
+    rating: '4.8',
+    rating_count: '86',
+    product_url: product_url,
+    product_id: product_id
+  %}
+{% endcomment %}
+
+{% assign card_image = image_url | default: '/CartNovaLogo.png' %}
+{% assign card_name = product_name | default: 'Product name' %}
+{% assign card_category = category | default: 'Category' %}
+{% assign card_price = price | default: '$0.00' %}
+{% assign card_product_url = product_url | default: sitemarkers['Product Details'].url | default: '/product-details' %}
+{% assign card_quick_view_url = quick_view_url | default: card_product_url %}
+{% assign card_cart_url = cart_url | default: sitemarkers['Shopping Cart'].url | default: '/shopping-cart' %}
+{% assign card_wishlist_url = wishlist_url | default: '#' %}
+
+<article class='card cn-product-card cn-card-hover' data-product-id='{{ product_id | escape }}'>
+  <div class='cn-product-card__media'>
+    {% if discount %}<span class='cn-product-card__discount'>{{ discount | escape }}</span>{% endif %}
+    <a class='cn-product-card__image-link' href='{{ card_product_url | escape }}' aria-label='View {{ card_name | escape }}'>
+      <img class='cn-product-card__image' src='{{ card_image | escape }}' alt='{{ image_alt | default: card_name | escape }}' loading='lazy'>
+    </a>
+    <a class='cn-product-card__wishlist' href='{{ card_wishlist_url | escape }}' aria-label='Add {{ card_name | escape }} to wishlist' data-cartnova-wishlist data-product-id='{{ product_id | escape }}'>
+      <span class='glyphicon glyphicon-heart-empty' aria-hidden='true'></span>
+    </a>
+    <a class='cn-product-card__quick-view' href='{{ card_quick_view_url | escape }}' data-cartnova-quick-view data-product-id='{{ product_id | escape }}'>Quick View</a>
+  </div>
+
+  <div class='cn-product-card__body'>
+    <p class='cn-product-card__category'>{{ card_category | escape }}</p>
+    <h3 class='cn-product-card__title'><a href='{{ card_product_url | escape }}'>{{ card_name | escape }}</a></h3>
+    <p class='cn-product-card__rating' aria-label='Rated {{ rating | default: "0" | escape }} out of 5'>
+      <span aria-hidden='true'>★★★★★</span>
+      <span class='cn-product-card__rating-value'>{{ rating | default: 'New' | escape }}</span>
+      {% if rating_count %}<span class='cn-product-card__rating-count'>({{ rating_count | escape }})</span>{% endif %}
+    </p>
+    <div class='cn-product-card__price-row'>
+      <span class='cn-product-card__price'>{{ card_price | escape }}</span>
+      {% if original_price %}<del class='cn-product-card__original-price'>{{ original_price | escape }}</del>{% endif %}
+    </div>
+  </div>
+
+  <a class='btn cn-btn cn-btn-primary cn-product-card__add' href='{{ card_cart_url | escape }}' data-cartnova-add-to-cart data-product-id='{{ product_id | escape }}' aria-label='Add {{ card_name | escape }} to cart'>
+    <span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span> Add to Cart
+  </a>
+</article>

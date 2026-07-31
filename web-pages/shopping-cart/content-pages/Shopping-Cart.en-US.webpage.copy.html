@@ -1,0 +1,199 @@
+<style>
+.sec-1 { background: #0a2a1a !important; }
+.sec-2 { background: #e63946 !important; }
+.sec-3 { background: #457b9d !important; }
+.sec-4 { background: #f4a261 !important; }
+.sec-5 { background: #2a9d8f !important; }
+.sec-6 { background: #9d4edd !important; }
+.sec-7 { background: #f72585 !important; }
+:root { --brand: #0a2a1a; --brand-2: #2a9d8f; --accent: #f4a261; --brand-shadow: rgba(10, 42, 26, 0.6); }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+* { font-family: 'Inter', sans-serif; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.anim-up { animation: fadeInUp 0.6s ease both; }
+.anim-fade { animation: fadeIn 0.8s ease both; }
+.btn-grad { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.btn-grad:hover { transform: translateY(-2px); box-shadow: 0 12px 28px var(--brand-shadow); }
+.card-lift { transition: transform 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 8px 28px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.12); }
+.card-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 52px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.14); }
+</style>
+
+<div class="row sectionBlockLayout sec-1" data-component-theme="portalThemeColor1" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 56px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Welcome</span>
+ <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 12px;">Explore CartNova</h1>
+ <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 520px; line-height: 1.7;">Your seamless shopping experience powered by Microsoft Power Pages and Dataverse backend.</p>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-2" data-component-theme="portalThemeColor2" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 64px 40px;">
+ <div style="text-align: center; margin-bottom: 48px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Featured Products</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 12px;">Top Picks for You</h2>
+ <p style="color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto; line-height: 1.7;">Discover our curated selection of popular products available now.</p>
+ </div>
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <img style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/c4026b5a-733d-4f03-9b68-efb06b21ad88/thumbnails/xxlarge.jpg" alt="Latest smartphone model">
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Smartphone X200</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Experience cutting-edge technology with the new Smartphone X200, featuring an ultra-clear display and fast processor.</p>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <img style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/e17a87d9-2e25-45d9-a341-85fb99224c6c/thumbnails/xxlarge.jpg" alt="Wireless headphones with noise cancellation">
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Noise-Canceling Headphones</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Enjoy immersive sound with our wireless noise-canceling headphones, perfect for music lovers on the go.</p>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <img style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/166d7c91-4ca2-4309-b3a8-859eefc7d4fd/thumbnails/xxlarge.jpg" alt="Smartwatch with health tracking features">
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Health Tracker Watch</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Monitor your fitness and health with our sleek smartwatch, equipped with multiple tracking features.</p>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <img style="width: 100%; height: auto; border-radius: 12px; margin-bottom: 20px;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/e02290a6-2aea-4f69-9556-09d614332727/thumbnails/xxlarge.jpg" alt="High-performance gaming laptop">
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Gaming Laptop Pro</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Power through games and work with our high-performance gaming laptop featuring the latest graphics card.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-3" data-component-theme="portalThemeColor3" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Product Spotlight</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 16px;">Smartphone X200 Details</h2>
+ <p style="color: rgba(255,255,255,0.85); line-height: 1.7; padding: 8px 0;">The Smartphone X200 combines a stunning 6.7-inch OLED display with a powerful octa-core processor and 5G connectivity. Capture stunning photos with the triple-lens camera system and enjoy all-day battery life.</p>
+ <ul style="color: rgba(255,255,255,0.85); line-height: 1.7; padding-left: 20px;">
+ <li>6.7-inch OLED display</li>
+ <li>Triple-lens 108MP camera</li>
+ <li>5G network support</li>
+ <li>4500mAh battery with fast charging</li>
+ <li>128GB storage, expandable</li>
+ </ul>
+ <button class="button1 btn-grad" style="background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; border: none; border-radius: 999px; padding: 14px 36px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 16px; align-self: flex-start;">Add to Cart</button>
+ </div>
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <img style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 56px rgba(0,0,0,0.13);" class="anim-fade" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/db3aaf83-01cb-4299-bed1-9f2244ae5822/thumbnails/xxlarge.jpg" alt="Close-up of Smartphone X200">
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-4" data-component-theme="portalThemeColor4" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Shop by Category</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 24px;">Browse Our Collections</h2>
+ <div style="display: flex; flex-direction: column; gap: 16px;">
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Electronics</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Latest gadgets including smartphones, laptops, and accessories.</div>
+ </div>
+ </div>
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Wearables</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Smartwatches, fitness trackers, and health monitoring devices.</div>
+ </div>
+ </div>
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Gaming</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">High-performance gaming laptops, consoles, and accessories.</div>
+ </div>
+ </div>
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Audio</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Speakers, headphones, and sound systems for every need.</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <img style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 56px rgba(0,0,0,0.2);" class="anim-fade" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/992c463f-49da-425d-a69b-13e58a0b7bf5/thumbnails/xxlarge.jpg" alt="Collage of shopping categories">
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-5" data-component-theme="portalThemeColor5" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 64px 40px;">
+ <div style="text-align: center; margin-bottom: 48px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Shopping Cart</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 12px;">Your Cart Items</h2>
+ <p style="color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto; line-height: 1.7;">Review your selected products before proceeding to checkout.</p>
+ </div>
+ <div style="background: rgba(255,255,255,0.12); border-radius: 20px; padding: 24px;">
+ <table style="width: 100%; color: #fff; border-collapse: collapse;">
+ <thead>
+ <tr style="border-bottom: 1px solid rgba(255,255,255,0.3);">
+ <th style="padding: 12px 16px; text-align: left;">Product</th>
+ <th style="padding: 12px 16px; text-align: center;">Quantity</th>
+ <th style="padding: 12px 16px; text-align: right;">Price</th>
+ <th style="padding: 12px 16px; text-align: right;">Total</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+ <td style="padding: 12px 16px;">Smartphone X200</td>
+ <td style="padding: 12px 16px; text-align: center;">1</td>
+ <td style="padding: 12px 16px; text-align: right;">$799</td>
+ <td style="padding: 12px 16px; text-align: right;">$799</td>
+ </tr>
+ <tr style="border-bottom: 1px solid rgba(255,255,255,0.15);">
+ <td style="padding: 12px 16px;">Noise-Canceling Headphones</td>
+ <td style="padding: 12px 16px; text-align: center;">2</td>
+ <td style="padding: 12px 16px; text-align: right;">$199</td>
+ <td style="padding: 12px 16px; text-align: right;">$398</td>
+ </tr>
+ </tbody>
+ <tfoot>
+ <tr>
+ <td colspan="3" style="padding: 12px 16px; font-weight: 700; text-align: right;">Subtotal</td>
+ <td style="padding: 12px 16px; font-weight: 700; text-align: right;">$1,197</td>
+ </tr>
+ </tfoot>
+ </table>
+ <div style="margin-top: 24px; display: flex; justify-content: flex-end; gap: 16px;">
+ <button class="button1 btn-grad" style="background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; border: none; border-radius: 999px; padding: 14px 36px; font-weight: 700; font-size: 1rem; cursor: pointer;">Continue Shopping</button>
+ <button class="button1 btn-grad" style="background: linear-gradient(135deg, var(--accent), #fca311); color: #fff; border: none; border-radius: 999px; padding: 14px 36px; font-weight: 700; font-size: 1rem; cursor: pointer;">Proceed to Checkout</button>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-6" data-component-theme="portalThemeColor6" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-8 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Checkout</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 16px;">Complete Your Order</h2>
+ <p style="color: rgba(255,255,255,0.85); line-height: 1.7; padding: 8px 0;">Fill in your shipping details below to finalize your purchase. Payment integration will be added soon.</p>
+ {%- entityform name: "CheckoutForm" -%}{%- endentityform -%}
+ </div>
+ <div class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <img style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 56px rgba(0,0,0,0.2);" class="anim-fade" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/d20464bd-83d0-4de1-8355-26ad13327f9b/thumbnails/xxlarge.jpg" alt="Illustration of online checkout process">
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-7" data-component-theme="portalThemeColor7" style="display: flex; flex-wrap: wrap; min-height: auto; clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 72px 48px;">
+ <h2 style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; color: #fff; margin-bottom: 16px;">Start Shopping with CartNova Today</h2>
+ <p style="color: rgba(255,255,255,0.85); max-width: 500px; line-height: 1.7; margin-bottom: 36px; padding: 8px 0;">Discover a smooth and intuitive shopping experience powered by Microsoft Power Pages and Dataverse. Browse, select, and checkout with ease.</p>
+ <button class="button1" style="background: rgba(255,255,255,0.5); color: var(--brand); border: none; border-radius: 999px; padding: 14px 40px; font-weight: 700; font-size: 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">Browse Products</button>
+ </div>
+ </div>
+</div>

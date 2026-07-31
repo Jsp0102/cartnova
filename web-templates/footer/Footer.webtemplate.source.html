@@ -1,0 +1,85 @@
+{% assign home_url = sitemarkers['Home'].url | default: '/' %}
+{% assign products_url = sitemarkers['Products'].url | default: '/products' %}
+{% assign categories_url = sitemarkers['Categories'].url | default: '/categories' %}
+{% assign cart_url = sitemarkers['Shopping Cart'].url | default: '/shopping-cart' %}
+{% assign checkout_url = sitemarkers['Checkout'].url | default: '/checkout' %}
+{% assign about_url = sitemarkers['About Us'].url | default: '/about-us' %}
+{% assign site_name = snippets['Site name'] | default: 'CartNova' %}
+
+<footer class='footer cn-footer' role='contentinfo'>
+  <div class='container'>
+    <div class='row cn-footer__main'>
+      <section class='col-sm-6 col-md-3 cn-footer__column' aria-labelledby='footer-about-title'>
+        <a class='cn-footer__brand' href='{{ home_url | escape }}'>{{ site_name | escape }}</a>
+        <h2 id='footer-about-title' class='sr-only'>About {{ site_name | escape }}</h2>
+        <p class='cn-footer__intro'>Your destination for quality products, simple shopping, and a better everyday experience.</p>
+        <ul class='cn-social-list list-inline' aria-label='Social media'>
+          <li><a href='#' aria-label='CartNova on Facebook'><span class='fa fa-facebook' aria-hidden='true'></span><span class='sr-only'>Facebook</span></a></li>
+          <li><a href='#' aria-label='CartNova on Instagram'><span class='fa fa-instagram' aria-hidden='true'></span><span class='sr-only'>Instagram</span></a></li>
+          <li><a href='#' aria-label='CartNova on X'><span class='fa fa-twitter' aria-hidden='true'></span><span class='sr-only'>X</span></a></li>
+          <li><a href='#' aria-label='CartNova on LinkedIn'><span class='fa fa-linkedin' aria-hidden='true'></span><span class='sr-only'>LinkedIn</span></a></li>
+        </ul>
+      </section>
+
+      <section class='col-xs-6 col-sm-3 col-md-2 cn-footer__column' aria-labelledby='footer-quick-links'>
+        <h2 id='footer-quick-links' class='cn-footer__title'>Quick Links</h2>
+        <ul class='list-unstyled cn-footer__links'>
+          <li><a href='{{ home_url | escape }}'>Home</a></li>
+          <li><a href='{{ products_url | escape }}'>Products</a></li>
+          <li><a href='{{ categories_url | escape }}'>Categories</a></li>
+          <li><a href='/deals'>Deals</a></li>
+        </ul>
+      </section>
+
+      <section class='col-xs-6 col-sm-3 col-md-2 cn-footer__column' aria-labelledby='footer-service-links'>
+        <h2 id='footer-service-links' class='cn-footer__title'>Customer Service</h2>
+        <ul class='list-unstyled cn-footer__links'>
+          <li><a href='{{ cart_url | escape }}'>Shopping Cart</a></li>
+          <li><a href='{{ checkout_url | escape }}'>Checkout</a></li>
+          <li><a href='/contact'>Contact Us</a></li>
+          <li><a href='/returns'>Returns &amp; Refunds</a></li>
+        </ul>
+      </section>
+
+      <section class='col-xs-6 col-sm-3 col-md-2 cn-footer__column' aria-labelledby='footer-about-links'>
+        <h2 id='footer-about-links' class='cn-footer__title'>About CartNova</h2>
+        <ul class='list-unstyled cn-footer__links'>
+          <li><a href='{{ about_url | escape }}'>Our Story</a></li>
+          <li><a href='/privacy'>Privacy Policy</a></li>
+          <li><a href='/terms'>Terms &amp; Conditions</a></li>
+          <li><a href='/accessibility'>Accessibility</a></li>
+        </ul>
+      </section>
+
+      <section class='col-sm-6 col-md-3 cn-footer__column' aria-labelledby='footer-newsletter-title'>
+        <h2 id='footer-newsletter-title' class='cn-footer__title'>Stay in the loop</h2>
+        <p class='cn-footer__newsletter-copy'>Get product updates, offers, and shopping inspiration.</p>
+        <form class='cn-newsletter-form' data-cartnova-newsletter novalidate>
+          <label class='sr-only' for='footer-newsletter-email'>Email address</label>
+          <div class='input-group'>
+            <input id='footer-newsletter-email' class='form-control' type='email' name='email' placeholder='Enter your email' autocomplete='email' required>
+            <span class='input-group-btn'>
+              <button class='btn cn-btn-primary' type='submit'>Subscribe</button>
+            </span>
+          </div>
+        </form>
+        <p class='cn-footer__newsletter-note'>You can unsubscribe at any time.</p>
+      </section>
+    </div>
+  </div>
+
+  <div class='cn-footer__bottom'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-sm-6'>
+          <p>© {{ now | date: 'yyyy' }} {{ site_name | escape }}. All rights reserved.</p>
+        </div>
+        <div class='col-sm-6 text-right cn-footer__legal'>
+          <a href='/privacy'>Privacy</a>
+          <a href='/terms'>Terms</a>
+          <a href='/contact'>Support</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

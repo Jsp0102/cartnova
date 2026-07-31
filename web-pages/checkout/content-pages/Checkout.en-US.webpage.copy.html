@@ -1,0 +1,188 @@
+<style>
+.sec-1 { background: #0a1a3c !important; }
+.sec-2 { background: #d32f2f !important; }
+.sec-3 { background: #1976d2 !important; }
+.sec-4 { background: #7b1fa2 !important; }
+.sec-5 { background: #009688 !important; }
+.sec-6 { background: #f57c00 !important; }
+.sec-7 { background: #c2185b !important; }
+:root { --brand: #0a1a3c; --brand-2: #1976d2; --accent: #f57c00; --brand-shadow: rgba(10,26,60,0.6); }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+* { font-family: 'Inter', sans-serif; }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.anim-up { animation: fadeInUp 0.6s ease both; }
+.anim-fade { animation: fadeIn 0.8s ease both; }
+.btn-grad { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.btn-grad:hover { transform: translateY(-2px); box-shadow: 0 12px 28px var(--brand-shadow); }
+.card-lift { transition: transform 0.25s ease, box-shadow 0.25s ease; box-shadow: 0 8px 28px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.12); }
+.card-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 52px rgba(0,0,0,0.38), 0 4px 12px rgba(0,0,0,0.14); }
+</style>
+
+<div class="row sectionBlockLayout sec-1" data-component-theme="portalThemeColor1" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 56px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Welcome to CartNova</span>
+ <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 12px;">Your Next-Gen Shopping Experience</h1>
+ <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 520px; line-height: 1.7;">Explore a seamless shopping journey powered by Microsoft Power Pages and Dataverse integration.</p>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-2" data-component-theme="portalThemeColor2" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 64px 40px;">
+ <div style="text-align: center; margin-bottom: 48px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Featured Categories</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 12px;">Shop by Category</h2>
+ <p style="color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto; line-height: 1.7;">Browse our diverse product categories to find exactly what you need.</p>
+ </div>
+ <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px;">
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <div style="width: 48px; height: 48px; border-radius: 14px; background: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 20px;">🛍️</div>
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Electronics</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Latest gadgets and devices to keep you connected.</p>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <div style="width: 48px; height: 48px; border-radius: 14px; background: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 20px;">👗</div>
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Fashion</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Trendy apparel and accessories for every style.</p>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <div style="width: 48px; height: 48px; border-radius: 14px; background: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 20px;">🏠</div>
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Home & Living</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Essentials and decor to make your house a home.</p>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.70); border-radius: 20px; padding: 32px;">
+ <div style="width: 48px; height: 48px; border-radius: 14px; background: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 20px;">🎮</div>
+ <h3 style="font-size: 1.05rem; font-weight: 700; color: #1a1a1a; margin-bottom: 8px;">Gaming</h3>
+ <p style="color: #555; line-height: 1.65; margin: 0; font-size: 0.95rem;">Consoles, games, and accessories for gamers.</p>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-3" data-component-theme="portalThemeColor3" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Featured Product</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 16px;">Smartphone X200</h2>
+ <p style="color: rgba(255,255,255,0.85); line-height: 1.7; padding: 8px 0;">Experience cutting-edge technology with the Smartphone X200 featuring a stunning display, powerful processor, and long-lasting battery life.</p>
+ <button class="button1 btn-grad" style="background: linear-gradient(135deg, var(--brand), var(--brand-2)); color: #fff; border: none; border-radius: 999px; padding: 14px 36px; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 8px; align-self: flex-start;">View Details</button>
+ </div>
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <img style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 56px rgba(0,0,0,0.13);" class="anim-fade" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/3ecf49ac-f875-41f7-b75d-fb1cdec74d48/thumbnails/xxlarge.jpg" alt="Smartphone X200 front view">
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-4" data-component-theme="portalThemeColor4" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; padding: 64px 40px;">
+ <div style="text-align: center; margin-bottom: 48px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Customer Feedback</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 12px;">What Our Shoppers Say</h2>
+ <p style="color: rgba(255,255,255,0.85); max-width: 520px; margin: 0 auto; line-height: 1.7;">Hear from our satisfied customers about their CartNova experience.</p>
+ </div>
+ <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+ <div class="card-lift" style="background: rgba(255,255,255,0.12); border-radius: 20px; padding: 32px; border: 1px solid rgba(255,255,255,0.2);">
+ <div style="color: rgba(255,255,255,0.9); font-size: 2.2rem; line-height: 1; margin-bottom: 16px;">❝</div>
+ <p style="color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 24px; font-style: italic; font-size: 0.97rem;">"The intuitive shopping cart and quick checkout process made my purchase effortless. Highly recommend CartNova!"</p>
+ <div style="display: flex; align-items: center; gap: 12px;">
+ <img style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/a4656cd3-db71-4179-8b67-bb68aa748e1c/thumbnails/xxlarge.jpg" alt="Emily Johnson">
+ <div>
+ <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">Emily Johnson</div>
+ <div style="color: rgba(255,255,255,0.65); font-size: 0.8rem;">Frequent Shopper</div>
+ </div>
+ </div>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.12); border-radius: 20px; padding: 32px; border: 1px solid rgba(255,255,255,0.2);">
+ <div style="color: rgba(255,255,255,0.9); font-size: 2.2rem; line-height: 1; margin-bottom: 16px;">❝</div>
+ <p style="color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 24px; font-style: italic; font-size: 0.97rem;">"CartNova's product categories helped me find everything I needed quickly. The UI is clean and responsive."</p>
+ <div style="display: flex; align-items: center; gap: 12px;">
+ <img style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/9fdd47d6-cb67-4404-8843-3c0b0cee282e/thumbnails/xxlarge.jpg" alt="Mark Thompson">
+ <div>
+ <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">Mark Thompson</div>
+ <div style="color: rgba(255,255,255,0.65); font-size: 0.8rem;">Tech Enthusiast</div>
+ </div>
+ </div>
+ </div>
+ <div class="card-lift" style="background: rgba(255,255,255,0.12); border-radius: 20px; padding: 32px; border: 1px solid rgba(255,255,255,0.2);">
+ <div style="color: rgba(255,255,255,0.9); font-size: 2.2rem; line-height: 1; margin-bottom: 16px;">❝</div>
+ <p style="color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 24px; font-style: italic; font-size: 0.97rem;">"The shopping cart features are smooth and reliable. I love how easy it is to update quantities and review my selections."</p>
+ <div style="display: flex; align-items: center; gap: 12px;">
+ <img style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0;" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/d7dd54ee-5f95-4841-b417-5f257c369c77/thumbnails/xxlarge.jpg" alt="Sophia Lee">
+ <div>
+ <div style="font-weight: 700; color: #fff; font-size: 0.9rem;">Sophia Lee</div>
+ <div style="color: rgba(255,255,255,0.65); font-size: 0.8rem;">Online Shopper</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-5" data-component-theme="portalThemeColor5" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Why Choose CartNova</span>
+ <h2 style="font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; color: #fff; margin-bottom: 24px;">Seamless Shopping Powered by Dataverse</h2>
+ <div style="display: flex; flex-direction: column; gap: 16px;">
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Integrated Backend</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Dataverse ensures reliable data management and real-time updates.</div>
+ </div>
+ </div>
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">User-Friendly Interface</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Clean design and intuitive navigation for a smooth shopping experience.</div>
+ </div>
+ </div>
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Responsive Design</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Optimized for all devices, ensuring access anytime, anywhere.</div>
+ </div>
+ </div>
+ <div style="display: flex; gap: 14px; align-items: flex-start;">
+ <div style="width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">✓</div>
+ <div>
+ <div style="font-weight: 700; color: #fff; margin-bottom: 4px;">Secure Checkout</div>
+ <div style="color: rgba(255,255,255,0.8); font-size: 0.92rem; line-height: 1.6;">Safe and simple checkout process without payment integration for proof of concept.</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; padding: 64px 40px;">
+ <img style="width: 100%; height: auto; border-radius: 20px; box-shadow: 0 20px 56px rgba(0,0,0,0.2);" class="anim-fade" src="https://cdn.hubblecontent.osi.office.net/m365content/publish/bfb68294-d896-4a0b-9897-0a4c927beb19/thumbnails/xxlarge.jpg" alt="Shopping cart filled with products">
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-6" data-component-theme="portalThemeColor6" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 72px 48px;">
+ <h2 style="font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 700; color: #fff; margin-bottom: 16px;">Ready to Start Shopping?</h2>
+ <p style="color: rgba(255,255,255,0.85); max-width: 500px; line-height: 1.7; margin-bottom: 36px; padding: 8px 0;">Browse products, add to your cart, and proceed to checkout with ease.</p>
+ <button class="button1" style="background: rgba(255,255,255,0.5); color: var(--brand); border: none; border-radius: 999px; padding: 14px 40px; font-weight: 700; font-size: 1rem; cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">Explore Products</button>
+ </div>
+ </div>
+</div>
+
+<div class="row sectionBlockLayout sec-7" data-component-theme="portalThemeColor7" style="display: flex; flex-wrap: wrap; min-height: auto;">
+ <div class="container" style="display: flex; flex-wrap: wrap; width: 100%;">
+ <div class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 56px 40px;">
+ <span style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.75); font-weight: 600; display: block; margin-bottom: 10px;">Checkout Preview</span>
+ <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 12px;">Secure Checkout Process</h1>
+ <p style="color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 520px; line-height: 1.7;">Review your cart items and enter shipping details to complete your order.</p>
+ {%- entityform name: "CheckoutForm" -%}
+ </div>
+ </div>
+</div>

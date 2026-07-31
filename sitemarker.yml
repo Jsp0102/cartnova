@@ -1,0 +1,33 @@
+- adx_name: Access Denied
+  adx_pageid: 280590c8-1cf9-4d81-89a2-0b272519f640
+  adx_sitemarkerid: 0efb2b85-ab02-4368-8bfc-25d6a18566c4
+- adx_name: Search
+  adx_pageid: cac1997d-c5e4-435e-9235-7b0511ba61b1
+  adx_sitemarkerid: 1e663b4c-b51c-4dce-a66d-a32dbaa201eb
+- adx_name: Categories
+  adx_pageid: 7504f329-cb9e-4473-bcc9-1989f26eab69
+  adx_sitemarkerid: 4c91780b-5c06-4f50-bcaa-2640eff25f67
+- adx_name: Page Not Found
+  adx_pageid: 35af369d-8280-44a0-beac-3c0a975983c1
+  adx_sitemarkerid: 556da856-bbb1-45b7-9075-6407b7e7c2b3
+- adx_name: Product Details
+  adx_pageid: 1564c096-7814-484d-b396-5a7aa99fcb60
+  adx_sitemarkerid: 5f4e4145-3d09-4efa-b6bd-96769cb63227
+- adx_name: Profile
+  adx_pageid: 5c263da3-3869-46de-8555-289a52f4a9f0
+  adx_sitemarkerid: 6d2cd369-cb0f-41ce-8a57-b0e7e38910a5
+- adx_name: Shopping Cart
+  adx_pageid: dde81774-8273-4e17-a7ad-e4aabe43b4d1
+  adx_sitemarkerid: 8cf07821-67cc-4743-b035-80c0bb37236e
+- adx_name: Checkout
+  adx_pageid: 5f7f15ca-9d52-403c-b622-76641ad55432
+  adx_sitemarkerid: be9e7b38-277c-47b2-a3cf-7de86a9500f9
+- adx_name: Home
+  adx_pageid: f499a8f8-8635-44f9-9819-0eedb3457051
+  adx_sitemarkerid: d42671f0-b516-4540-b896-fe102d317d70
+- adx_name: Products
+  adx_pageid: c912d3ef-d494-465e-9655-280f44f33300
+  adx_sitemarkerid: f67812ff-cf19-4cff-9d3f-5e49b628fa27
+- adx_name: About Us
+  adx_pageid: e9032edc-8b35-41a0-bec5-27da4a3f2754
+  adx_sitemarkerid: fd95d89d-6422-4f44-a6e0-557215e4c40b

@@ -1,0 +1,83 @@
+{% assign home_url = sitemarkers['Home'].url | default: '/' %}
+{% assign products_url = sitemarkers['Products'].url | default: '/products' %}
+{% assign cart_url = sitemarkers['Shopping Cart'].url | default: '/shopping-cart' %}
+{% assign checkout_url = sitemarkers['Checkout'].url | default: '/checkout' %}
+{% assign product_details_url = sitemarkers['Product Details'].url | default: '/product-details' %}
+{% assign chair_image = 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e5effe3c-bb70-4625-9e8f-9ce0365e6ae8/thumbnails/xxlarge.jpg' %}
+
+<div class='cn-product-details-page'>
+  <div class='container'>
+    <ol class='breadcrumb cn-details-breadcrumb'>
+      <li><a href='{{ home_url | escape }}'>Home</a></li>
+      <li><a href='{{ products_url | escape }}'>Products</a></li>
+      <li class='active'>UltraComfort Ergonomic Chair</li>
+    </ol>
+
+    <section class='row cn-product-details' aria-labelledby='product-title'>
+      <div class='col-md-6'>
+        <div class='cn-product-gallery'>
+          <div class='cn-product-gallery__thumbnails' role='list' aria-label='Product image gallery'>
+            <button class='cn-product-gallery__thumbnail is-active' type='button' data-product-thumbnail data-full-image='{{ chair_image }}' data-image-alt='UltraComfort ergonomic chair front view' aria-label='Show chair front view'><img src='{{ chair_image }}' alt=''></button>
+            <button class='cn-product-gallery__thumbnail' type='button' data-product-thumbnail data-full-image='{{ chair_image }}' data-image-alt='UltraComfort ergonomic chair side view' aria-label='Show chair side view'><img src='{{ chair_image }}' alt=''></button>
+            <button class='cn-product-gallery__thumbnail' type='button' data-product-thumbnail data-full-image='{{ chair_image }}' data-image-alt='UltraComfort ergonomic chair detail view' aria-label='Show chair detail view'><img src='{{ chair_image }}' alt=''></button>
+          </div>
+          <div class='cn-product-gallery__main'>
+            <img id='product-main-image' src='{{ chair_image }}' alt='UltraComfort ergonomic chair front view'>
+          </div>
+        </div>
+      </div>
+
+      <div class='col-md-6 cn-product-details__summary'>
+        <p class='cn-eyebrow'>Home &amp; Living</p>
+        <h1 id='product-title'>UltraComfort Ergonomic Chair</h1>
+        <div class='cn-product-details__rating'><span class='cn-rating' aria-label='Rated 4.8 out of 5'>★★★★★</span><a href='#product-reviews'>4.8 (124 reviews)</a></div>
+        <div class='cn-product-details__price'><span>$189.99</span><del>$229.99</del><span class='cn-badge'>17% OFF</span></div>
+        <p class='cn-product-details__description'>Work, create, and unwind in comfort. This breathable mesh chair offers dependable ergonomic support and a tailored fit for every workday.</p>
+        <ul class='cn-product-details__highlights'>
+          <li><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> Adjustable lumbar support</li>
+          <li><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> Breathable mesh back</li>
+          <li><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> 3-year limited warranty</li>
+        </ul>
+        <div class='cn-product-details__availability'><span class='glyphicon glyphicon-ok-circle' aria-hidden='true'></span> In stock — ready to ship</div>
+        <div class='cn-product-details__purchase'>
+          <div class='cn-quantity-selector' aria-label='Quantity selector'>
+            <button type='button' data-quantity-change='decrease' aria-label='Decrease quantity'>−</button>
+            <label class='sr-only' for='product-quantity'>Quantity</label><input id='product-quantity' type='number' min='1' value='1' inputmode='numeric'>
+            <button type='button' data-quantity-change='increase' aria-label='Increase quantity'>+</button>
+          </div>
+          <a class='btn cn-btn cn-btn-primary' href='{{ cart_url | escape }}' data-cartnova-add-to-cart data-product-id='ultracomfort-ergonomic-chair'><span class='glyphicon glyphicon-shopping-cart' aria-hidden='true'></span> Add to Cart</a>
+          <a class='btn cn-btn cn-btn-outline' href='{{ checkout_url | escape }}' data-cartnova-buy-now data-product-id='ultracomfort-ergonomic-chair'>Buy Now</a>
+        </div>
+        <button class='cn-details-wishlist' type='button' data-cartnova-wishlist data-product-id='ultracomfort-ergonomic-chair'><span class='glyphicon glyphicon-heart-empty' aria-hidden='true'></span> Add to Wishlist</button>
+        <div class='row cn-product-details__assurances'>
+          <div class='col-xs-4'><span class='glyphicon glyphicon-send'></span><strong>Free shipping</strong><small>Orders over $50</small></div>
+          <div class='col-xs-4'><span class='glyphicon glyphicon-repeat'></span><strong>Easy returns</strong><small>Within 7 days</small></div>
+          <div class='col-xs-4'><span class='glyphicon glyphicon-lock'></span><strong>Secure payment</strong><small>Protected checkout</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class='cn-product-information'>
+      <ul class='nav nav-tabs' role='tablist'>
+        <li class='active' role='presentation'><a href='#product-description' aria-controls='product-description' role='tab' data-toggle='tab'>Description</a></li>
+        <li role='presentation'><a href='#product-specifications' aria-controls='product-specifications' role='tab' data-toggle='tab'>Specifications</a></li>
+        <li role='presentation'><a href='#product-reviews' aria-controls='product-reviews' role='tab' data-toggle='tab'>Reviews (124)</a></li>
+      </ul>
+      <div class='tab-content'>
+        <div role='tabpanel' class='tab-pane active' id='product-description'><h2>Designed for your best workday</h2><p>The UltraComfort Ergonomic Chair pairs an adjustable seat and armrests with a breathable mesh back, helping you stay supported through focused work sessions. Its smooth-rolling base and refined silhouette fit naturally into a home office or creative studio.</p></div>
+        <div role='tabpanel' class='tab-pane' id='product-specifications'><h2>Specifications</h2><dl class='row cn-specifications'><dt class='col-sm-4'>Material</dt><dd class='col-sm-8'>Breathable mesh, fabric, and reinforced nylon base</dd><dt class='col-sm-4'>Seat height</dt><dd class='col-sm-8'>17.7–21.6 in (45–55 cm)</dd><dt class='col-sm-4'>Weight capacity</dt><dd class='col-sm-8'>286 lb (130 kg)</dd><dt class='col-sm-4'>Warranty</dt><dd class='col-sm-8'>3-year limited warranty</dd></dl></div>
+        <div role='tabpanel' class='tab-pane' id='product-reviews'><h2>Customer reviews</h2><div class='cn-details-review'><span class='cn-rating'>★★★★★</span><p>“The chair is comfortable from the first sit and the adjustable lumbar support makes a real difference.”</p><strong>Emily R.</strong></div><div class='cn-details-review'><span class='cn-rating'>★★★★★</span><p>“A well-built chair with a clean look. Easy to assemble and great for all-day use.”</p><strong>Michael L.</strong></div></div>
+      </div>
+    </section>
+
+    <section class='cn-related-products' aria-labelledby='related-products-title'>
+      <div class='cn-home-section__heading'><div><p class='cn-eyebrow'>You may also like</p><h2 id='related-products-title' class='cn-section-title'>Related Products</h2></div><a href='{{ products_url | escape }}'>View all <span class='glyphicon glyphicon-arrow-right' aria-hidden='true'></span></a></div>
+      <div class='row'>
+        <div class='col-xs-6 col-sm-4 col-md-3'>{% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/166d7c91-4ca2-4309-b3a8-859eefc7d4fd/thumbnails/xxlarge.jpg', image_alt: 'Smart watch', product_name: 'Smart Watch Series 9', category: 'Electronics', price: '$129.99', rating: '4.9', rating_count: '128', product_url: product_details_url, cart_url: cart_url, product_id: 'smart-watch-series-9' %}</div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>{% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e17a87d9-2e25-45d9-a341-85fb99224c6c/thumbnails/xxlarge.jpg', image_alt: 'Wireless headphones', product_name: 'Wireless Headphones', category: 'Electronics', price: '$79.99', original_price: '$99.99', discount: '20% OFF', rating: '4.8', rating_count: '86', product_url: product_details_url, cart_url: cart_url, product_id: 'wireless-headphones' %}</div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>{% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/db4d8a3a-8904-45b1-83f8-29113bb1b9bf/thumbnails/xxlarge.jpg', image_alt: 'Digital camera', product_name: 'Compact Digital Camera', category: 'Electronics', price: '$249.99', rating: '4.6', rating_count: '42', product_url: product_details_url, cart_url: cart_url, product_id: 'compact-digital-camera' %}</div>
+        <div class='col-xs-6 col-sm-4 col-md-3'>{% include 'CartNova Product Card', image_url: 'https://cdn.hubblecontent.osi.office.net/m365content/publish/e02290a6-2aea-4f69-9556-09d614332727/thumbnails/xxlarge.jpg', image_alt: 'Gaming laptop', product_name: 'Gaming Laptop Pro', category: 'Computers', price: '$1,099.99', rating: '4.9', rating_count: '67', product_url: product_details_url, cart_url: cart_url, product_id: 'gaming-laptop-pro' %}</div>
+      </div>
+    </section>
+  </div>
+</div>
