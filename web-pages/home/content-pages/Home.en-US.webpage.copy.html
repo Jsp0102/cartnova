@@ -1,5 +1,12 @@
 {% assign products_url = sitemarkers['Products'].url | default: '/products' %} {% assign categories_url = sitemarkers['Categories'].url | default: '/categories' %} {% assign cart_url = sitemarkers['Shopping Cart'].url | default: '/shopping-cart' %} {% assign search_url = sitemarkers['Search'].url | default: '/search' %}
-
+{% fetchxml categories %}
+<fetch>
+  <entity name="new_cartnova_category">
+    <attribute name="new_categoryname" />
+  </entity>
+</fetch>
+{% endfetchxml %}
+{{ categories.results.entities[0].new_categoryname }}
 <div class="cn-home">
   <section class="cn-home-hero bg-surface-container-low">
     <div class="container">
@@ -69,7 +76,7 @@
           <a class="cn-category-card" href="{{ categories_url | escape }}"><span class="glyphicon glyphicon-phone"></span><strong>{{ category.new_categoryname }}</strong></a>
         </div>
         {% endfor %} -->
-        <div class="col-xs-6 col-sm-4 col-md-2">
+        <!-- <div class="col-xs-6 col-sm-4 col-md-2">
           <a class="cn-category-card" href="{{ categories_url | escape }}"><span class="glyphicon glyphicon-tag"></span><strong>Fashion</strong></a>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
@@ -83,7 +90,7 @@
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2">
           <a class="cn-category-card" href="{{ categories_url | escape }}"><span class="glyphicon glyphicon-th-large"></span><strong>Explore More</strong></a>
-        </div>
+        </div> -->
       </div>
       
     </div>
