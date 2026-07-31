@@ -1907,6 +1907,11 @@ body {
 
 .cn-page-title { font-size: clamp(1.875rem, 3vw, 3rem); line-height: 1.1; }
 .cn-section-title { font-size: clamp(1.5rem, 2.25vw, 2.25rem); line-height: 1.2; }
+h2.cn-section-title{
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+}
 .cn-text-muted { color: var(--cn-muted) !important; }
 .cn-text-primary { color: var(--cn-primary) !important; }
 .cn-bg-surface { background-color: var(--cn-card) !important; }
