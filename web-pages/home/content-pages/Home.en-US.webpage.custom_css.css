@@ -49,8 +49,8 @@
 .cn-category-display-card img { height: 17rem; object-fit: cover; transition: transform 350ms ease; width: 100%; }
 .cn-category-display-card__overlay { background: linear-gradient(180deg, transparent 25%, rgba(15, 23, 42, .9) 100%); inset: 0; position: absolute; }
 .cn-category-display-card__content { bottom: 0; color: #fff; left: 0; padding: 1.25rem; position: absolute; right: 0; }
-.cn-category-display-card__content strong, .cn-category-display-card__content small, .cn-category-display-card__content > span { display: block; }
-.cn-category-display-card__content strong { font-size: 1.125rem; }
+.cn-category-display-card__content h3, .cn-category-display-card__content small, .cn-category-display-card__content > span { display: block; }
+.cn-category-display-card__content h3 { font-size: 18px; line-height: 28px;font-weight: 700;}
 .cn-category-display-card__content small { color: #d1fae5; font-size: .8125rem; margin-top: .25rem; }
 .cn-category-display-card__content > span { color: #fff; font-size: .75rem; font-weight: 700; margin-top: .75rem; opacity: 0; transform: translateY(.5rem); transition: opacity 220ms ease, transform 220ms ease; }
 .cn-category-display-card:hover, .cn-category-display-card:focus { box-shadow: var(--cn-shadow-lg); color: #fff; text-decoration: none; transform: translateY(-5px); }
